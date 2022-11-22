@@ -48,7 +48,7 @@ class _AnimatedDialogState extends State<AnimatedDialog> {
               )),
           child: widget.width == 0 ? null : !show ? null :  Column(
             children: [
-              ChatWidgets.searchField(onSubmit: (a){}),
+              ChatWidgets.searchField(),
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 8.0),
