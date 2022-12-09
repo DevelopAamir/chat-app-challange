@@ -35,6 +35,14 @@ class Styles {
       suffixIcon: IconButton(onPressed: onSubmit, icon: const Icon(Icons.send)),
     );
   }
+  static searchTextFieldStyle() {
+    return InputDecoration(
+      border: InputBorder.none,
+      hintText: 'Enter Name',
+      contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+      suffixIcon: IconButton(onPressed: (){}, icon: const Icon(Icons.search_rounded)),
+    );
+  }
   static searchField({Function(String)? onChange}) {
     return Container(
       margin: const EdgeInsets.all(10),
