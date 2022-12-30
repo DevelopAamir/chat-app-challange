@@ -163,18 +163,14 @@ class ChatWidgets {
     );
   }
 
-  static searchField({onSubmit}) {
-    final con = TextEditingController();
+  static searchField({Function(String)? onChange}) {
     return Container(
-
       margin: const EdgeInsets.all(10),
-      child: TextField(
-        controller: con,
-        decoration: Styles.searchTextFieldStyle(onSubmit: () {
-          onSubmit(con);
-        }),
-      ),
       decoration: Styles.messageFieldCardStyle(),
+      child: TextField(
+       onChanged: onChange,
+        decoration: Styles.searchTextFieldStyle(),
+      ),
     );
   }
 }
